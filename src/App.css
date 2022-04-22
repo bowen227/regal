@@ -14,6 +14,10 @@ body {
   justify-content: center;
 }
 
+.svg-wrapper svg {
+  width: 100%;
+}
+
 .a {
   fill: #ff6900;
 }
@@ -101,9 +105,6 @@ body {
   svg {
     max-width: 240px;
     padding-left: 16px;
-  }
-  .card-deck {
-    max-width: 1080px;
   }
 }
 
