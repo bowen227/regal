@@ -3,7 +3,7 @@ import Card from './Card';
 
 export default function CardDeck({ movies }) {
     const [moviesToShow, setMoviesToShow] = useState(10);
-    const [totalMovies, setTotalMovies] = useState(movies.length);
+    const [totalMovies] = useState(movies.length);
 
     return (
         <>
@@ -12,6 +12,7 @@ export default function CardDeck({ movies }) {
                     if (index < moviesToShow) {
                         return <Card key={m.Order} posterImg={m.Movie.Media.filter(pi => pi.SubType === 'TV_SmallPosterImage')} title={m.Movie.Title} />
                     }
+                    return 'good'
                 })}
             </section>
             <div className='more-btn-container'>
