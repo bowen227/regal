@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.svg-wrapper {
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.a {
+  fill: #ff6900;
+}
+
+.b {
+  fill: #fff;
+}
+
+.header-banner {
+  padding: 32px;
+  background-color: #ff6900;
+}
+
+.card-deck {
+  padding: 48px 32px;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  max-width: 300px;
+  padding-bottom: 32px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.card img {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card p {
+  align-self: flex-start;
+  padding-left: 16px;
+}
+
+.more-btn-container {
+  display: flex;
+  padding: 0 32px 32px 32px;
+}
+
+.load-more-btn {
+  background-color: #ff6900;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 520px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    width: 240px;
+    margin: unset;
+  }
+
+  .load-more-btn {
+    width: 240px;
+  }
+}
+
+@media (min-width: 864px) {
+  .card-deck {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .svg-wrapper {
+    justify-content: flex-start;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  svg {
+    max-width: 240px;
+    padding-left: 16px;
+  }
+  .card-deck {
+    max-width: 1080px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card-deck {
+    max-width: 1360px;
   }
 }

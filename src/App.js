@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import CardDeck from './components/CardDeck';
+import Header from './components/Header';
+import DATA from './shared/data';
 
 function App() {
+  // MovieFeedEntries Movie Media where SubType === TV_SmallPosterImage
+  const [movies, setMovies] = useState(null);
+
+  if (!movies) {
+    setMovies(DATA.MovieFeedEntries);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {movies ? <CardDeck movies={movies} /> : 'Loading....'}
     </div>
   );
 }
