@@ -12,7 +12,7 @@ export default function CardDeck({ movies }) {
                     if (index < moviesToShow) {
                         return <Card key={m.Order} posterImg={m.Movie.Media.filter(pi => pi.SubType === 'TV_SmallPosterImage')} title={m.Movie.Title} />
                     }
-                    return 'good'
+                    return null
                 })}
             </section>
             <div className='more-btn-container'>
