@@ -13,10 +13,6 @@ export default function Details({ movie }) {
         setWindowWidth(window.window.innerWidth);
     }
 
-    if (windowWidth < 768) {
-        setShowMore(true);
-    }
-
     switch (movie.Rating) {
         case 'PG':
             rating = 'https://www.regmovies.com/xmedia/img/10110/rating/PG.png';
@@ -51,7 +47,7 @@ export default function Details({ movie }) {
                     :
                     null
                 }
-                {showMore ? 
+                {showMore || windowWidth > 767 ? 
                     <div className='show-more'>
                         <div className="details-content">
                             <h2>More information about</h2>
