@@ -34,7 +34,7 @@ body {
 }
 
 .card-deck {
-  padding: 48px 32px;
+  padding: 48px 16px;
 }
 
 .card {
@@ -43,7 +43,6 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  max-width: 300px;
   padding-bottom: 32px;
   margin: 0 auto;
   text-decoration: none;
@@ -235,12 +234,11 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     margin: 0 auto;
-    max-width: 520px;
   }
 
   .card {
-    width: 240px;
     margin: unset;
+    width: 47%;
   }
 
   .load-more-btn {
@@ -263,32 +261,28 @@ body {
   }
 }
 
-@media (min-width: 864px) {
-  .card-deck {
-    max-width: 800px;
-  }
-}
-
 @media (min-width: 1024px) {
   .svg-wrapper {
     justify-content: flex-start;
     max-width: 1024px;
     margin: 0 auto;
+    padding: 40px 16px;
   }
   svg {
     max-width: 240px;
-    padding-left: 16px;
   }
-}
 
-@media (min-width: 1150px) {
-  .card-deck {
-    max-width: 1080px;
+  .card {
+    width: calc(100vw / 4 - 43px);
   }
 }
 
 @media (min-width: 1440px) {
   .card-deck {
-    max-width: 1360px;
+    max-width: 1440px;
+  }
+  .card {
+    width: calc(100vw / 5 - 39px);
+    max-width: 255px;
   }
 }
