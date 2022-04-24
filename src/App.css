@@ -34,7 +34,7 @@ body {
 }
 
 .card-deck {
-  padding: 48px 16px;
+  padding: 48px 32px;
 }
 
 .card {
@@ -234,6 +234,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     margin: 0 auto;
+    padding: 48px 16px;
   }
 
   .card {
@@ -256,6 +257,14 @@ body {
     width: 50%;
   }
 
+  .more-details {
+    text-align: center;
+  }
+
+  .more-details button {
+    max-width: 250px;
+  }
+
   .link-item {
     margin-bottom: 0;
   }
@@ -266,10 +275,11 @@ body {
     justify-content: flex-start;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 40px 16px;
+    padding: 40px 0px;
   }
-  svg {
+  .svg-wrapper svg {
     max-width: 240px;
+    margin-left: 16px;
   }
 
   .card {

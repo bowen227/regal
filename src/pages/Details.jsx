@@ -17,6 +17,12 @@ export default function Details({ movie }) {
         setWindowWidth(window.window.innerWidth);
     }
 
+    const handleResize = () => {
+        setWindowWidth(window.window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
     switch (movie.Rating) {
         case 'PG':
             rating = 'https://www.regmovies.com/xmedia/img/10110/rating/PG.png';
