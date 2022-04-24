@@ -184,6 +184,51 @@ body {
   max-width: 400px;
 }
 
+.footer {
+  border-top: 1px solid #444;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1020px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 16px;
+  margin: 0 auto;
+}
+
+.footer-container .col {
+  max-width: 46%;
+}
+
+.footer-container .col h4 {
+  margin-bottom: 16px;
+}
+
+.link-item {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: #aaa;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.link-item a:hover {
+  color: #fff;
+}
+
+.footer .rights {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 32px;
+  color: #aaa;
+}
+
 @media (min-width: 768px) {
   .card-deck {
     display: flex;
@@ -212,6 +257,10 @@ body {
   .details-content {
     width: 50%;
   }
+
+  .link-item {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 864px) {
@@ -229,6 +278,12 @@ body {
   svg {
     max-width: 240px;
     padding-left: 16px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .card-deck {
+    max-width: 1080px;
   }
 }
 

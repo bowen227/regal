@@ -16,7 +16,6 @@ function App() {
 
   if (!movies) {
     setMovies(DATA.MovieFeedEntries);
-    console.log(DATA.MovieFeedEntries[0].Movie);
   }
 
   return (
