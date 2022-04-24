@@ -100,6 +100,16 @@ body {
   font-size: 20px;
 }
 
+.breadcrumb-wrapper .breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.breadcrumb-wrapper .breadcrumb a:hover {
+  color: #ff6900;
+}
+
 .details .title {
   display: flex;
   align-items: baseline;
@@ -110,8 +120,22 @@ body {
   height: 24px;
 }
 
-.details .preview img {
+.details .preview {
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  padding-top: 56.25%;
+  margin-bottom: 16px;
+}
+
+.details .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .details .more-details button {

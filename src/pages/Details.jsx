@@ -7,6 +7,9 @@ export default function Details({ movie }) {
     const [windowWidth, setWindowWidth] = useState(null);
     const options = {year: 'numeric', month: 'long', day: 'numeric'};
     const releaseDate = new Date(movie.OpeningDate).toLocaleDateString("en-US", options);
+    const trailer = movie.Media.filter(m => m.SubType === 'Trailer_Youtube')[0];
+    const embedUrl = 'https://www.youtube.com/embed/';
+    const trailerUrl = `${embedUrl}${trailer.Url.split('/')[3]}?autoplay=1&mute=1&origin=https://regal-test.netlify.app`;
     let rating = null;
 
     if (!windowWidth) {
@@ -30,7 +33,9 @@ export default function Details({ movie }) {
         <div className='details'>
             <Header />
             <div className="breadcrumb-wrapper">
-                <Link className='breadcrumb' to="/">Home / {movie.Title}</Link>
+                <span className='breadcrumb'>
+                    <Link to="/">Home /</Link> {movie.Title}
+                </span>
             </div>
             <div className="details-wrapper">
                 <div className='title'>
@@ -38,7 +43,16 @@ export default function Details({ movie }) {
                     <img src={rating} alt={movie.Title} />
                 </div>
                 <div className='preview'>
-                    <img src={movie.Media.filter(m => m.SubType === 'TV_CarouselFeature')[0].Url} alt={movie.Title} />
+                    {trailer ? 
+                        <iframe
+                          className='responsive-iframe'
+                          src={trailerUrl}
+                          frameBorder="0"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                          title="video"
+                        />
+                    : null}
                 </div>
                 {windowWidth < 768 ?
                     <div className='more-details'>
