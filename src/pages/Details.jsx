@@ -41,7 +41,7 @@ export default function Details({ movie }) {
             <Header />
             <div className="breadcrumb-wrapper">
                 <span className='breadcrumb'>
-                    <Link to="/">Home /</Link> {movie.Title}
+                    <Link to="/">Home </Link>/ {movie.Title}
                 </span>
             </div>
             <div className="details-wrapper">
