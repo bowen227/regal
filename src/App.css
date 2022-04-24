@@ -183,6 +183,35 @@ body {
   max-width: 400px;
 }
 
+.fifty-fifty {
+  width: 100%;
+}
+
+.fifty-container {
+  max-width: 1440px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.fifty-wrapper .img-wrapper img {
+  width: 100%;
+}
+
+.fifty-wrapper .content-wrapper .btn-wrapper {
+  background-color: #ff6900;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.fifty-wrapper .content-wrapper .btn-wrapper a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 16px 0px;
+}
+
 .footer {
   border-top: 1px solid #444;
 }
@@ -234,7 +263,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     margin: 0 auto;
-    padding: 48px 16px;
+    padding: 48px 16px 0px;
   }
 
   .card {
@@ -261,8 +290,30 @@ body {
     text-align: center;
   }
 
+  .more-btn-container {
+    padding: 0;
+  }
+
   .more-details button {
     max-width: 250px;
+  }
+
+  .fifty-container {
+    max-width: 1440px;
+  }
+
+  .fifty-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .fifty-container .img-wrapper {
+    min-width: 50%;
+  }
+
+  .fifty-wrapper .content-wrapper .btn-wrapper {
+    max-width: 200px;
   }
 
   .link-item {
